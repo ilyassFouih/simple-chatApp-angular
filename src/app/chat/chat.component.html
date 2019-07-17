@@ -1,0 +1,27 @@
+<div class="card shadow mt-2">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <div class="alert alert-primary" role="alert">
+          connected users : <strong claas="mr-5"> {{users}} </strong>
+          <strong class="float-right"> {{ userService.connectedUser.firstName }}  {{ userService.connectedUser.lastName }}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-auto custom-height">
+      <div class="row ">
+        <div class="col-12" *ngFor="let msg of messages">
+          <strong> {{msg.user.firstName}} {{msg.user.lastName}} </strong> <span> : {{msg.message}} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-group">
+    <input type="text" (keyup.enter)="addChat()" class="form-control" [(ngModel)]="message.message" name="message" id="message"
+      placeholder="enter your message ...">
+    <span class="input-group-btn">
+      <button class="btn btn-success" (click)="addChat()">send </button>
+    </span>
+
+  </div>
+</div>
