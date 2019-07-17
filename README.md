@@ -1,5 +1,5 @@
-# ChatAppWithNestJs
-
+# simple chat app 
+a simple chat application with angular in frontend and nestjs in backend,this repo is for frontend 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Development server
